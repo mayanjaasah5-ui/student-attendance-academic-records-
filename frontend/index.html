@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="University student attendance and academic records management">
+  <title>CampusCore | Academic Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="CampusCore home">
+        <span class="brand-mark">C</span><span>Campus<span class="brand-light">Core</span><small>ACADEMIC PORTAL</small></span>
+      </a>
+      <div class="nav-caption">WORKSPACE</div>
+      <nav class="navigation" aria-label="Main navigation">
+        <button class="nav-link active" data-page="dashboard"><span class="nav-icon">⌂</span>Dashboard</button>
+        <button class="nav-link" data-page="students"><span class="nav-icon">♙</span>Students</button>
+        <button class="nav-link" data-page="lecturers"><span class="nav-icon">♧</span>Lecturers</button>
+        <button class="nav-link" data-page="courses"><span class="nav-icon">▤</span>Courses</button>
+        <button class="nav-link" data-page="attendance"><span class="nav-icon">◷</span>Attendance</button>
+        <button class="nav-link" data-page="grades"><span class="nav-icon">▦</span>Academic records</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="service-indicator"><span class="status-dot"></span><span><b>Database status</b><small id="connection-label">Checking connection...</small></span></div>
+        <div class="profile-mini"><span class="avatar">UA</span><span><b>University Admin</b><small>Administrator</small></span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb"><span>Workspace</span><span class="crumb-separator">/</span><b id="page-crumb">Dashboard</b></div>
+        <div class="topbar-actions"><span class="today-label" id="today-label"></span><span class="top-avatar">UA</span></div>
+      </header>
+      <section id="page-content" class="page-content" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <div class="toast-region" id="toast-region" aria-live="polite"></div>
+  <dialog id="record-dialog" class="record-dialog">
+    <form id="record-form" method="dialog">
+      <div class="dialog-heading"><div><p class="eyebrow">RECORD DETAILS</p><h2 id="dialog-title">Add record</h2></div><button type="button" class="icon-button" id="close-dialog" aria-label="Close dialog">×</button></div>
+      <div id="form-fields" class="form-grid"></div>
+      <div class="dialog-actions"><button type="button" class="button button-quiet" id="cancel-dialog">Cancel</button><button type="submit" class="button button-primary" id="save-record">Save record</button></div>
+    </form>
+  </dialog>
+  <script src="/js/app.js" defer></script>
+</body>
+</html>
